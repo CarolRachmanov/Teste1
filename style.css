@@ -1,0 +1,97 @@
+/* Eu percebi que algumas coisas se repetem, como width e height, por exemplo. Qual seria a melhor forma de eu juntar tudo isso numa classe, por exemplo? */
+
+
+#main {
+    display: grid;
+    grid-template-areas:    'nav nav nav'
+                            'section section aside'
+                            'footer footer footer';
+    grid-auto-rows: 20vh 80vh 30vh;
+    grid-column-gap: 5px;
+}
+nav {
+    grid-area: nav;
+    width: 100vw;
+    height: 100px;
+    background-color: paleturquoise;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    font-family: 'Staatliches', cursive;
+    font-size: 16pt;
+    color: rgb(163, 40, 163);
+    text-decoration: none;
+   
+}
+
+nav a:nth-child(2) {
+    font-family: 'Staatliches', cursive;
+    font-size: 35pt;
+    color: rgb(248, 248, 248);
+    text-decoration: none;
+    /* Aqui eu queria separar, colocando esse "Procede?" bem mais para a esquerda, como se fizesse parte do logo. Percebi que quando coloquei uma classe, mesmo assim ele deu mais prioridade para essas configurações. Por quê?*/
+}
+
+nav a:hover {
+    color: white;
+}
+/*.Quadradinho {
+    width:100vw;
+    height:2000pt;
+    background-color:rgb(50, 124, 124);
+}
+*/
+section {
+    grid-area: section;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    }
+
+footer {
+    width:100vw;
+    height: 50pt;
+    background-color: rgb(217, 233, 79);
+    font-size: 10pt;
+    text-decoration: none;
+    color: black;
+    font-family: 'Staatliches', cursive;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section {
+    width:80vw;
+    height: 500pt;
+    background-color: rgb(58, 58, 190);
+    align-items: center;
+    
+}
+
+aside {
+    grid-area: aside;
+    background-color: rgb(75, 145, 138);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    }
+
+.texto {
+    font-size: 15pt;
+    text-decoration: none;
+    color: rgb(255, 234, 234);
+    font-family: 'Staatliches', cursive;
+}
+
+aside h2 {
+    font-size: 20pt;
+    text-decoration: none;
+    color: rgb(255, 234, 234);
+    font-family: 'Staatliches', cursive;
+}
